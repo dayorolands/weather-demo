@@ -41,6 +41,10 @@ val SnowyRainyIcon: ImageVector
     @Composable
     get() = ImageVector.vectorResource(id = R.drawable.ic_snowyrainy)
 
+val SunnyIcon: ImageVector
+    @Composable
+    get() = ImageVector.vectorResource(id = R.drawable.ic_sunny)
+
 val SunnyCloudyIcon: ImageVector
     @Composable
     get() = ImageVector.vectorResource(id = R.drawable.ic_sunnycloudy)
