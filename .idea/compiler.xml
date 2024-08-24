@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="11">
+      <module name="GithubDemo.app" target="17" />
+      <module name="GithubDemo.core.data" target="17" />
+      <module name="GithubDemo.core.database" target="17" />
+      <module name="GithubDemo.core.presentation.designsystems" target="17" />
+      <module name="GithubDemo.dashboard.data" target="17" />
+      <module name="GithubDemo.dashboard.presentation" target="17" />
+      <module name="GithubDemo.repositories.data" target="17" />
+      <module name="GithubDemo.repositories.presentation" target="17" />
+      <module name="GithubDemo.users.data" target="17" />
+      <module name="GithubDemo.users.domain" target="17" />
+      <module name="GithubDemo.users.domain.main" target="17" />
+      <module name="GithubDemo.users.domain.test" target="17" />
+      <module name="GithubDemo.users.presentation" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
