@@ -22,7 +22,7 @@ internal fun Project.configureBuildTypes(
                 extensions.configure<ApplicationExtension> {
                     buildTypes {
                         debug {
-                            configureDebugBuildType()
+                            configureDebugBuildType(commonExtension)
                         }
                         release {
                             configureReleaseBuildType(commonExtension)
@@ -34,7 +34,7 @@ internal fun Project.configureBuildTypes(
                 extensions.configure<LibraryExtension> {
                     buildTypes {
                         debug {
-                            configureDebugBuildType()
+                            configureDebugBuildType(commonExtension)
                         }
                         release {
                             configureReleaseBuildType(commonExtension)
@@ -46,14 +46,18 @@ internal fun Project.configureBuildTypes(
     }
 }
 
-private fun BuildType.configureDebugBuildType(){
-    buildConfigField("String", "BASE_URL", "\"https://runique.pl-coding.com:8080\"")
+private fun BuildType.configureDebugBuildType(
+    commonExtension: CommonExtension<*, *, *, *, *, *>,
+){
+    proguardFiles(
+        commonExtension.getDefaultProguardFile("proguard-android-optimize.txt"),
+        "proguard-rules.pro"
+    )
 }
 
 private fun BuildType.configureReleaseBuildType(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
 ){
-    buildConfigField("String", "BASE_URL", "\"https://runique.pl-coding.com:8080\"")
 
     isMinifyEnabled = true
     proguardFiles(
